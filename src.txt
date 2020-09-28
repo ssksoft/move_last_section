@@ -1,7 +1,17 @@
 Sub findText()
 
-With Selection.Find
-    .Text = "参考文献"
-    .Execute
-End With
+'With Selection.Find
+'    .Text = "参考文献"
+'    .Execute
+'End With
+'Const myPage As Integer = 10
+'Selection.GoTo What:=wdGoToPage, Count:=1
+'ActiveDocument.Range(0, Selection.End).Select
+
+
+'ActiveDocument.Range(0, Selection.End).Select
+'Selection.EndKey Unit:=wdStory
+Selection.MoveEndUntil Cset:=wdStory
+Selection.GoTo What:=wdGoToPage, Count:=10
+ActiveDocument.Range(Selection.End).Select
 End Sub
