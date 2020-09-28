@@ -1,0 +1,7 @@
+Sub findText()
+
+With Selection.Find
+    .Text = "参考文献"
+    .Execute
+End With
+End Sub
